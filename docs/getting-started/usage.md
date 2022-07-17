@@ -15,7 +15,7 @@ capri --stl path/to/stl/dir/
 capri --no-stl
 ```
 
-## C Compiler
+## C compiler
 The default C compiler Capri invokes is `gcc`. To change this, use the `-c` (`--cc`) option. For example, to use `tcc` instead:
 ```bash
 capri -c tcc
