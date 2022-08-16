@@ -296,6 +296,25 @@ pub fn publicFunction() { ... };
 ```
 Any module which imports `example` will behave as if they also imported `some::other::mod`, and they will also have access to `MyType` and `publicFunction`.
 
+## Polymorphism
+As one of Capri's aims is to be a functional programming language, being able to define polymorphism is an essential feature. Currently Capri only supports parametric polymorphism, but ad-hoc polymorphism and row polymorphism are planned.
+
+### Parametric Polymorphism
+```rust
+// The identity function
+fn id(x)
+    x;
+
+fn main() {
+    print(id(123)); // Outputs 123
+    print(id("abc")); // Outputs 'abc'
+};
+```
+
+---
+
+Under the hood, polymorphism essentially acts as syntactic sugar. The compiler goes through a *monomorphization pass* where it finds all the types a polymorphic function has been instantiated with, and generates copies of the function for each unique instantiation. 
+
 # Miscellaneous
 ## Calling External Functions
 Capri provides the `extern` keyword to interact with functions defined elsewhere. Essentially, it adds a dummy entry into the typing environment when semantic analysis happens, and it is up to the programmer to ensure that the function will exist when compiled. **By using this keyword, you are throwing away any guarantees made by the static analysis in the compiler.** Currently it's used by the standard library.

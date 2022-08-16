@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Capri programming language documentation">
+    <meta name="author" content="05st">
+    <link rel="canonical" href="https://05st.github.io/capri-website/">
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    
+    <title>Home - Capri</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body class="homepage" >
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href=".">Capri</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="active">
+                        <a href=".">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="https://github.com/05st/capri">GitHub</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/05st/capri-website/edit/master/docs/index.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#capri-documentation">Capri Documentation</a></li>
+        <li class="first-level "><a href="#getting-started">Getting Started</a></li>
+            <li class="second-level"><a href="#installation">Installation</a></li>
+                
+                <li class="third-level"><a href="#compiling-from-source">Compiling From Source</a></li>
+                <li class="third-level"><a href="#downloading-precompiled-binaries">Downloading Precompiled Binaries</a></li>
+            <li class="second-level"><a href="#usage">Usage</a></li>
+                
+                <li class="third-level"><a href="#source-directory">Source Directory</a></li>
+                <li class="third-level"><a href="#standard-library">Standard Library</a></li>
+                <li class="third-level"><a href="#output-path">Output Path</a></li>
+        <li class="first-level "><a href="#basic-concepts">Basic Concepts</a></li>
+            <li class="second-level"><a href="#expressions">Expressions</a></li>
+                
+                <li class="third-level"><a href="#literal-expressions">Literal Expressions</a></li>
+                <li class="third-level"><a href="#block-expressions">Block Expressions</a></li>
+                <li class="third-level"><a href="#if-expressions">If Expressions</a></li>
+                <li class="third-level"><a href="#match-expressions">Match Expressions</a></li>
+            <li class="second-level"><a href="#variables">Variables</a></li>
+                
+                <li class="third-level"><a href="#declaring-and-initializing-variables">Declaring and Initializing Variables</a></li>
+                <li class="third-level"><a href="#using-variables">Using Variables</a></li>
+                <li class="third-level"><a href="#mutability">Mutability</a></li>
+                <li class="third-level"><a href="#declaring-mutable-variables">Declaring Mutable Variables</a></li>
+            <li class="second-level"><a href="#functions">Functions</a></li>
+                
+                <li class="third-level"><a href="#defining-functions">Defining Functions</a></li>
+                <li class="third-level"><a href="#calling-functions">Calling Functions</a></li>
+                <li class="third-level"><a href="#recursion">Recursion</a></li>
+        <li class="first-level "><a href="#language-features">Language Features</a></li>
+            <li class="second-level"><a href="#user-defined-operators">User Defined Operators</a></li>
+                
+            <li class="second-level"><a href="#algebraic-data-types">Algebraic Data Types</a></li>
+                
+                <li class="third-level"><a href="#records">Records</a></li>
+                <li class="third-level"><a href="#enums">Enums</a></li>
+                <li class="third-level"><a href="#using-records">Using Records</a></li>
+                <li class="third-level"><a href="#using-enums">Using Enums</a></li>
+            <li class="second-level"><a href="#module-system">Module System</a></li>
+                
+                <li class="third-level"><a href="#creating-and-importing-modules">Creating and Importing Modules</a></li>
+                <li class="third-level"><a href="#circular-dependencies">Circular Dependencies</a></li>
+                <li class="third-level"><a href="#controlling-visibility-with-pub">Controlling Visibility With pub</a></li>
+        <li class="first-level "><a href="#miscellaneous">Miscellaneous</a></li>
+            <li class="second-level"><a href="#calling-external-functions">Calling External Functions</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="capri-documentation">Capri Documentation</h1>
+<p>Welcome to the Capri docs. If you believe any changes should be made here, please click the <strong>Edit on GitHub</strong> button on the very top right and open a pull request.</p>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="installation">Installation</h2>
+<p>You can install Capri in one of two ways:</p>
+<ul>
+<li>Compiling it from source</li>
+<li>Downloading a precompiled binary</li>
+</ul>
+<h3 id="compiling-from-source">Compiling From Source</h3>
+<ol>
+<li>Ensure <a href="https://github.com/05st/capri/blob/master/LICENSE">Stack</a> and <a href="https://git-scm.com/">Git</a> are installed. *</li>
+<li>Clone the git repository <code>git clone https://github.com/05st/capri</code>.</li>
+<li>Run <code>stack build</code> inside the cloned repository.</li>
+<li>The resulting binary can be found under <code>./.stack-work/dist/&lt;something&gt;/build/capri-exe/</code>.</li>
+</ol>
+<p><em>* It's recommended to install Stack via <a href="https://www.haskell.org/ghcup/">ghcup</a>.</em></p>
+<h3 id="downloading-precompiled-binaries">Downloading Precompiled Binaries</h3>
+<p>Check the <a href="https://github.com/05st/capri/releases">releases</a> page for the latest precompiled binaries.</p>
+<h2 id="usage">Usage</h2>
+<p><strong>Using the Capri compiler requires <a href="https://clang.llvm.org/get_started.html"><code>clang</code></a> to be installed at the very least.</strong> It's recommended to have the rest of <a href="https://github.com/llvm/llvm-project">LLVM</a> installed as the compiler will be able to make additional optimizations.</p>
+<h3 id="source-directory">Source Directory</h3>
+<p>Running the compiler without any arguments will treat the current directory as the project source directory (i.e. where all of your <code>.cpr</code> files are). To manually specify the source directory, use the <code>-d</code> (<code>--dir</code>) option as shown.</p>
+<pre><code class="language-bash">capri -d path/to/dir/
+</code></pre>
+<h3 id="standard-library">Standard Library</h3>
+<p>By default, the compiler will include the standard library. To disallow this, use the <code>--no-stl</code> flag.</p>
+<pre><code class="language-bash">capri --no-stl
+</code></pre>
+<h3 id="output-path">Output Path</h3>
+<p>To specify the output path, use the <code>-o</code> (<code>--out</code>) option.</p>
+<pre><code class="language-bash">capri -o path/to/output
+</code></pre>
+<hr />
+<p>Use the <code>-h</code> flag for information on all command line options.</p>
+<h1 id="basic-concepts">Basic Concepts</h1>
+<h2 id="expressions">Expressions</h2>
+<p>In Capri, nearly everything is an expression by design. An expression is something that has a value.</p>
+<h3 id="literal-expressions">Literal Expressions</h3>
+<p>Literal expressions are simply things like integer/float literals, boolean literals, string literals, character literals, and so on.</p>
+<pre><code class="language-rust">// Integers
+123
+981245172
+// Floats
+12.34
+3.14159
+// Booleans
+true
+false
+// Unit
+()
+</code></pre>
+<h3 id="block-expressions">Block Expressions</h3>
+<p>Even code blocks are treated as expressions! They evaluate to whatever the last expression is. If there is no final expression, they implicitly evaluate into <code>()</code> (unit).</p>
+<pre><code class="language-rust">// This code block evaluates to 12.34
+{
+    abc;
+    let stuff = xyz();
+    12.34
+}
+// There's no final expression in this one - so it implicitly evaluates into a ()
+{
+    let res = call_some_func(42);
+    if res { ... } else { ... };
+    12.34; // This is not an expression, it's an expression statement
+}
+</code></pre>
+<h3 id="if-expressions">If Expressions</h3>
+<pre><code class="language-rust">if cond a b
+</code></pre>
+<h3 id="match-expressions">Match Expressions</h3>
+<pre><code class="language-rust">match xyz {
+    // ...
+}
+</code></pre>
+<hr />
+<p>We will discuss if expressions, match expressions, and even lambda expressions later on.</p>
+<h2 id="variables">Variables</h2>
+<p>Declaring, initializing, and using variables are some of the most fundamental ideas in programming.</p>
+<h3 id="declaring-and-initializing-variables">Declaring and Initializing Variables</h3>
+<pre><code class="language-rust">let abc = 10;
+let xyz = false;
+</code></pre>
+<p>In Capri, all variables must be initialized when declared.</p>
+<h3 id="using-variables">Using Variables</h3>
+<pre><code class="language-rust">let a = 1;
+let b = 2;
+a + b // Evalues to 3
+</code></pre>
+<h3 id="mutability">Mutability</h3>
+<p>By default, all variables are immutable. This means you can't assign to them (mutate them).</p>
+<pre><code class="language-rust">let message = &quot;hello&quot;;
+message = &quot;goodbye&quot;; // ERROR: 'message' is immutable
+</code></pre>
+<h3 id="declaring-mutable-variables">Declaring Mutable Variables</h3>
+<p>To declare a variable as mutable, use the <code>mut</code> keyword before the variable name.</p>
+<pre><code class="language-rust">let mut message = &quot;hello&quot;;
+message = &quot;goodbye&quot;;
+</code></pre>
+<h2 id="functions">Functions</h2>
+<p>Functions are a cruicial aspect of programming - any decent programming language should support defining functions and procedures. Capri in particular puts a strong emphasis on <a href="https://en.wikipedia.org/wiki/Functional_programming">functional programming</a>: to build up complexity through the composition of simpler functions.</p>
+<h3 id="defining-functions">Defining Functions</h3>
+<p>Functions can be defined with the <code>fn</code> keyword.
+Type annotations are optional as the compiler supports type inference.
+(However, until parametric polymorphism is implemented, you may have to add some type annotations to prevent the compiler from inferring a polymorphic function).</p>
+<p>All functions evaluate to a single expression if there is no <code>return</code> statement.</p>
+<pre><code class="language-rust">fn example()
+    123;
+fn addFive(n)
+    n + 5;
+fn greet(name: str): unit {
+    print(&quot;Hello, &quot;);
+    print(name);
+};
+fn factorial(n) {
+    if n == 0 { return 1; };
+    // ...
+};
+</code></pre>
+<h3 id="calling-functions">Calling Functions</h3>
+<p>Functions are invoked as one would normally expect.</p>
+<pre><code class="language-rust">greet(&quot;Capri&quot;); // Outputs 'Hello, Capri'
+addFive(example()); // Evaluates to 128
+</code></pre>
+<h3 id="recursion">Recursion</h3>
+<p>It's essential for a functional programming language to allow functions being defined in terms of themselves (recursively).</p>
+<pre><code class="language-rust">fn factorial(n)
+    if n &lt;= 1
+        1
+    else
+        n * factorial(n - 1);
+</code></pre>
+<h1 id="language-features">Language Features</h1>
+<p>Moving on from basic programming concepts. These are the features which make Capri stand out.</p>
+<h2 id="user-defined-operators">User Defined Operators</h2>
+<p>Capri is designed with user extensibility in mind. Because of that, defining your own operators is a key feature that it offers.</p>
+<p>Defining an operator is similar to defining a function, except you must specify a fixity and a precedence.</p>
+<pre><code class="language-rust">// Exponentiation operator
+op infixr 10 ** (base, exp) {
+    let mut count = 0;
+    let mut res = 1;
+    while cout &lt; res {
+        res = res * base;
+        count = count + 1;
+    };
+    res
+};
+</code></pre>
+<pre><code class="language-rust">2 ** 6 // Evaluates to 64
+</code></pre>
+<p>All possibile fixities are: <code>infix</code>, <code>infixl</code>, <code>infixr</code>, <code>prefix</code>, <code>postfix</code>. The precedence can be an arbitrarily large positive integer.</p>
+<h2 id="algebraic-data-types">Algebraic Data Types</h2>
+<p>The expressive type system is an important part of Capri, which is why being able to define new data types is an esssential feature. <a href="https://en.wikipedia.org/wiki/Algebraic_data_type">Algebraic data types</a> are new types created by composing other data types. All algebraic data types are ultimately composed from the base types.</p>
+<h3 id="records">Records</h3>
+<p>Records, also known as product types, are very similar to structs from languages such as C. In Capri they are slightly different as record types are <em>anonymous</em>.</p>
+<pre><code class="language-rust">type Person = {name: str, age: i64, height: f64};
+</code></pre>
+<p>To use records, there are a few record operations which we will see next.</p>
+<h3 id="enums">Enums</h3>
+<p>Enums are also known as sum types. They are identical to enums found in other languages such as Rust.
+Unlike record types, enums are not anonymous - allowing them to be defined recursively <em>(<a href="https://en.wikipedia.org/wiki/Recursive_data_type#Isorecursive_types">Isorecursive types</a>)</em>.</p>
+<pre><code class="language-rust">enum MaybeStr = &lt;just(str), none&gt;;
+
+enum BinaryTree = &lt;item(i32), left(BinaryTree*), right(BinaryTree*)&gt;;
+</code></pre>
+<p>Enums are handled through pattern matching (with match expressions).</p>
+<h3 id="using-records">Using Records</h3>
+<p>To interact with records, Capri provides a few record operations: <em>extension</em>, <em>restriction</em>, and <em>selection</em>.</p>
+<h4 id="record-extension">Record Extension</h4>
+<p>Extending a record simply means adding another field (row) to it. The syntax is <code>{field | recordBeingExtended}</code>.</p>
+<pre><code class="language-rust">type Person = {name: str, age: i64, height: f64};
+type EmployedPerson = {salary: f64 | Person};
+</code></pre>
+<pre><code class="language-rust">let bob: Person = {name = &quot;Bob&quot;, age = 17, height = 170.18};
+let joe: EmployedPerson = {salary = 123.45 | bob};
+</code></pre>
+<h4 id="record-restriction">Record Restriction</h4>
+<p>Restriction is essentially the inverse of extension. You remove a row from the record. The syntax is <code>{recordBeingRestricted - label}</code>.</p>
+<pre><code class="language-rust">bob == {joe - salary}
+</code></pre>
+<h4 id="record-selection">Record Selection</h4>
+<p>This is just simply indexing a record. (Syntax <code>record.label</code>).</p>
+<pre><code class="language-rust">print(bob.name) // Outputs 'Bob'
+</code></pre>
+<h3 id="using-enums">Using Enums</h3>
+<p>To extract values from an enum, you must pattern match against it and handle all of the different possible cases. Currently, Capri does not perform static exhaustiveness checks - meaning, an unhandled case in a match expression will result in a runtime error.</p>
+<pre><code class="language-rust">enum MaybeStr = &lt;just(str), none&gt;;
+
+fn test(a) {
+    match a {
+        MaybeStr::just(s) =&gt; print(s),
+        MaybeStr::none =&gt; print(&quot;none&quot;)
+    };
+};
+
+fn main() {
+    let abc = MaybeStr::just(&quot;exists&quot;);
+    let xyz = MaybeStr::none;
+
+    test(abc); // Outputs 'exists'
+    test(xyz); // Outputs 'none'
+};
+</code></pre>
+<h2 id="module-system">Module System</h2>
+<p>It's important for large codebases to be split apart and organized into different sections, each serving their own purpose. Capri provides a module system for this reason.</p>
+<p>Every <code>.capri</code> file is a module (the name of the module does not necessarily have to be the name of the file). The path to it from the root project directory will be the module path. For example, if you have a project organized like this:</p>
+<ul>
+<li>Project<ul>
+<li>someDirectory<ul>
+<li>test.capri (<code>module test;</code>)</li>
+</ul>
+</li>
+<li>main.capri (<code>module main;</code>)</li>
+</ul>
+</li>
+</ul>
+<p>The qualified name for the <code>test</code> module would be <code>someDirectory::test</code>, and the qualified name for the <code>main</code> module will just simply be <code>main</code>. The compiler requires a module named <code>main</code> to be at the very top level of the project (and it must contain a <code>main</code> function).</p>
+<h3 id="creating-and-importing-modules">Creating and Importing Modules</h3>
+<p>Every <code>.capri</code> file is a module and therefore needs a module definition on the very first line. A module definition is simply <code>module &lt;module name&gt;;</code>.</p>
+<p>To import a module, use the <code>import</code> keyword (e.g. <code>import someDirectory::test;</code>). The path to the imported module is always absolute (from the project root directory), and not relative to the module that's importing it.</p>
+<h3 id="circular-dependencies">Circular Dependencies</h3>
+<p>The compiler performs dependency checking and any circular dependencies will result in a compile time error. Well-organized code should not have to result to mutually recursive modules.</p>
+<h3 id="controlling-visibility-with-pub">Controlling Visibility With <code>pub</code></h3>
+<p>By default, any imports and top-level definitions made in a module are not exported. Use the <code>pub</code> keyword to indicate that a certain top-level definition should be made public, or use it to indicate that imports should be 'passed down'. For example:</p>
+<pre><code class="language-rust">module example;
+import abc::xyz;
+pub import some::other::mod;
+pub type MyType = {a: i64, b: bool};
+fn privateFunction() { ... };
+pub fn publicFunction() { ... };
+</code></pre>
+<p>Any module which imports <code>example</code> will behave as if they also imported <code>some::other::mod</code>, and they will also have access to <code>MyType</code> and <code>publicFunction</code>.</p>
+<h1 id="miscellaneous">Miscellaneous</h1>
+<h2 id="calling-external-functions">Calling External Functions</h2>
+<p>Capri provides the <code>extern</code> keyword to interact with functions defined elsewhere. Essentially, it adds a dummy entry into the typing environment when semantic analysis happens, and it is up to the programmer to ensure that the function will exist when compiled. <strong>By using this keyword, you are throwing away any guarantees made by the static analysis in the compiler.</strong> Currently it's used by the standard library.</p>
+<pre><code class="language-rust">module io;
+extern printf : str, str -&gt; unit;
+fn print(text: str): unit {
+    printf(&quot;%s&quot;, text);
+};
+// ...
+</code></pre>
+<p><strong>The <code>extern</code> keyword may be removed/changed at any time, so it's not recommended to be used unless absolutely necessary.</strong></p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Capri is licensed under the <a href='https://github.com/05st/capri/blob/master/LICENSE'>MIT license</a></small><br>
+            
+            <!-- <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small> -->
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "."</script>
+    
+    <script src="js/base.js"></script>
+    <script src="search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
+
+<!--
+MkDocs version : 1.3.1
+Build Date UTC : 2022-08-16 20:41:18.643958+00:00
+-->
