@@ -144,6 +144,9 @@
                 <li class="third-level"><a href="#creating-and-importing-modules">Creating and Importing Modules</a></li>
                 <li class="third-level"><a href="#circular-dependencies">Circular Dependencies</a></li>
                 <li class="third-level"><a href="#controlling-visibility-with-pub">Controlling Visibility With pub</a></li>
+            <li class="second-level"><a href="#polymorphism">Polymorphism</a></li>
+                
+                <li class="third-level"><a href="#parametric-polymorphism">Parametric Polymorphism</a></li>
         <li class="first-level "><a href="#miscellaneous">Miscellaneous</a></li>
             <li class="second-level"><a href="#calling-external-functions">Calling External Functions</a></li>
                 
@@ -383,6 +386,20 @@ fn privateFunction() { ... };
 pub fn publicFunction() { ... };
 </code></pre>
 <p>Any module which imports <code>example</code> will behave as if they also imported <code>some::other::mod</code>, and they will also have access to <code>MyType</code> and <code>publicFunction</code>.</p>
+<h2 id="polymorphism">Polymorphism</h2>
+<p>As one of Capri's aims is to be a functional programming language, being able to define polymorphism is an essential feature. Currently Capri only supports parametric polymorphism, but ad-hoc polymorphism and row polymorphism are planned.</p>
+<h3 id="parametric-polymorphism">Parametric Polymorphism</h3>
+<pre><code class="language-rust">// The identity function
+fn id(x)
+    x;
+
+fn main() {
+    print(id(123)); // Outputs 123
+    print(id(&quot;abc&quot;)); // Outputs 'abc'
+};
+</code></pre>
+<hr />
+<p>Under the hood, polymorphism essentially acts as syntactic sugar. The compiler goes through a <em>monomorphization pass</em> where it finds all the types a polymorphic function has been instantiated with, and generates copies of the function for each unique instantiation. </p>
 <h1 id="miscellaneous">Miscellaneous</h1>
 <h2 id="calling-external-functions">Calling External Functions</h2>
 <p>Capri provides the <code>extern</code> keyword to interact with functions defined elsewhere. Essentially, it adds a dummy entry into the typing environment when semantic analysis happens, and it is up to the programmer to ensure that the function will exist when compiled. <strong>By using this keyword, you are throwing away any guarantees made by the static analysis in the compiler.</strong> Currently it's used by the standard library.</p>
@@ -500,5 +517,5 @@ fn print(text: str): unit {
 
 <!--
 MkDocs version : 1.3.1
-Build Date UTC : 2022-08-16 20:41:18.643958+00:00
+Build Date UTC : 2022-08-16 20:56:47.745312+00:00
 -->
