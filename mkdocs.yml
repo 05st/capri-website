@@ -1,0 +1,15 @@
+site_name: Capri
+site_url: https://05st.github.io/capri-website/
+site_author: 05st
+site_description: "Capri programming language documentation"
+repo_url: "https://github.com/05st/capri-website"
+copyright: "Capri is licensed under the <a href='https://github.com/05st/capri/blob/master/LICENSE'>MIT license</a>"
+
+theme:
+  name: null
+  custom_dir: 'cinder'
+  colorscheme: github
+
+nav:
+  - Home: 'index.md'
+  - GitHub: "https://github.com/05st/capri"
