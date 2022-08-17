@@ -23,7 +23,7 @@ Check the [releases](https://github.com/05st/capri/releases) page for the latest
 **Using the Capri compiler requires [`clang`](https://clang.llvm.org/get_started.html) to be installed at the very least.** It's recommended to have the rest of [LLVM](https://github.com/llvm/llvm-project) installed as the compiler will be able to make additional optimizations.
 
 ### Source Directory
-Running the compiler without any arguments will treat the current directory as the project source directory (i.e. where all of your `.cpr` files are). To manually specify the source directory, use the `-d` (`--dir`) option as shown.
+Running the compiler without any arguments will treat the current directory as the project source directory (i.e. where all of your `.capri` files are). To manually specify the source directory, use the `-d` (`--dir`) option as shown.
 ```bash
 capri -d path/to/dir/
 ```
