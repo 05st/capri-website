@@ -9,7 +9,7 @@ You can install Capri in one of two ways:
 - Downloading a precompiled binary
 
 ### Compiling From Source
-1. Ensure [Stack](https://github.com/05st/capri/blob/master/LICENSE) and [Git](https://git-scm.com/) are installed. *
+1. Ensure [Stack](https://docs.haskellstack.org/en/stable/README/) and [Git](https://git-scm.com/) are installed. *
 2. Clone the git repository `git clone https://github.com/05st/capri`.
 3. Run `stack build` inside the cloned repository.
 4. The resulting binary can be found under `./.stack-work/dist/<something>/build/capri-exe/`.
